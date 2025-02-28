@@ -1,0 +1,83 @@
+/************* Animations ******************/
+@keyframes animatedGradient {
+    from {
+      background-size: 80%;
+    }
+
+    to {
+      background-size: 250%;
+    }
+  }
+
+.home .banner {
+    width: 100%;
+    mask-image: linear-gradient(to bottom right, transparent, black 30%);
+    -webkit-mask-image: linear-gradient(to bottom right, transparent, black 30%);
+}
+
+.hero {
+    position: relative;
+}
+
+.hero-caption {
+    position: absolute;
+    width: 100%;
+    padding-left: 6%;
+    bottom: 10%;
+}
+
+.hero-title {
+    font-family: var(--font-sigmar);
+    letter-spacing: 2px;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+    background: radial-gradient(circle, rgb(240, 168, 238) 10%, white 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: animatedGradient 4s infinite ease-in-out;
+    animation-direction:alternate-reverse;
+}
+
+.hero-caption p {
+    margin-bottom: 20px;
+    color: var(--color-text);
+    font-family: var(--font-robert-medium);
+    font-weight: 700;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-buttons .btn {
+    border: 0;
+    outline: 0;
+    padding: 8px 14px;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-family:var(--font-robert-medium) ;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn img{
+    width: 25px;
+}
+
+.info-btn {
+    color: #fff;
+    background: #6d6d6eb3;
+}
+
+.hero-buttons .btn:hover {
+    background: #ffffffbf;
+}
+
+.hero-buttons .info-btn:hover {
+    background: #6d6d6e66;
+}

@@ -1,0 +1,16 @@
+@import "./vars.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg2);
+}
+
+html, body {
+  overscroll-behavior-y: none;
+  overscroll-behavior-x: none;
+}
