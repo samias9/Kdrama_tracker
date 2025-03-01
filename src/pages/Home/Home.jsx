@@ -1,7 +1,7 @@
 import React from 'react'
 import './Home.css'
 import Navbar from '../../components/Navbar/Navbar'
-import banner from '../../assets/banner4.png'
+import banner from '../../assets/banner2.png'
 import info from '../../assets/info_icon.png'
 import play_icon from '../../assets/play_icon.png'
 import TitleCards from '../../components/TitleCards/TitleCards'

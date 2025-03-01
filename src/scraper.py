@@ -204,11 +204,14 @@ for page in range(1, total_pages + 1):
             # Récupération de l'image (gestion du lazy loading)
             try:
                 img_elem = drama_elem.find_element(By.CSS_SELECTOR, "img.img-responsive")
-                img_url = img_elem.get_attribute("src")  # Vérifier si l'image est chargée normalement
-                if "blank" in img_url or not img_url:
-                    img_url = img_elem.get_attribute("data-src")  # Essayer de récupérer via data-src
+                img_url = img_elem.get_attribute("src")  # D'abord, essayer avec `src`
+                if not img_url or "blank" in img_url:   # Si `src` est vide ou une image de placeholder
+                    img_url = img_elem.get_attribute("data-src")  # Essayer avec `data-src`
+                if not img_url:  # Vérifier si l'image est toujours vide
+                    img_url = "Aucune image trouvée"
             except:
                 img_url = "Aucune image trouvée"
+
 
             drama_data.append({
                 "title": title,
